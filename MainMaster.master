@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster.master.cs" Inherits="MainMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href='fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="Content/style.css">
+    <link rel="stylesheet" type="text/css" href="Content/superfish.css">
+    <%--    <link rel="stylesheet" type="text/css" href="Content/jquery-ui.css">--%>
+
+
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/jquery-1.11.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/bootstrap-3.1.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/superfish.js")%>"></script>
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/jquery.waypoints.min.js")%>"></script>
+    <%--<script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/jquery-ui.js")%>"></script>--%>
+
+    <%--<script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/main.js")%>"></script> --%>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div id="fh5co-header">
+            <header id="fh5co-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                        <h1 id="fh5co-logo">
+                            
+
+                        </h1>
+                        <!-- START #fh5co-menu-wrap -->
+                        <nav id="fh5co-menu-wrap" role="navigation" style="padding-top: 10px;">
+                            <ul class="sf-menu" id="fh5co-primary-menu">
+                                <li>
+                                    <a href="../Elections/Map.aspx">Map</a>
+                                </li>
+                                <li><a href="../Admin/ElectionYears.aspx">Election Years</a></li>
+                                <li><a href="../Admin/Parties.aspx">Parties</a></li>
+                                <li>
+                                    <a href="services.html" class="fh5co-sub-ddown">Candidates</a>
+                                    <ul class="fh5co-sub-menu">
+                                        <li><a href="../Candidates/AddCandidates.aspx">Add Candidates</a></li>
+                                        <li><a href="../Candidates/Candidates.aspx">Candidates List</a></li>                                                                                                                       
+                                        <li><a href="../Elections/ElectionCandidatesList.aspx">Election Candidates List</a></li>                                        
+                                    </ul>
+                                </li>                               
+                                <li>
+                                    <a href="services.html" class="fh5co-sub-ddown">NA</a>
+                                    <ul class="fh5co-sub-menu">                                        
+                                        <li><a href="../Admin/AddNA.aspx">Add NA</a></li>                                                                                                                                                               
+                                        <li><a href="../Admin/NAList.aspx">NA List</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="services.html" class="fh5co-sub-ddown">PA</a>
+                                    <ul class="fh5co-sub-menu">                                        
+                                        <li><a href="../Admin/PA.aspx">Add PA</a></li>
+                                        <li><a href="../Admin/PAList.aspx">PA List</a></li>
+                                        <li><a href="../Admin/AddTehsil.aspx">Tehsil</a></li>
+                                        <li><a href="../Admin/AddUCS.aspx">UCs</a></li>
+                                    </ul>
+                                </li>
+
+                                
+                                 <li>
+                                    <a href="services.html" class="fh5co-sub-ddown">LB Elections</a>
+                                    <ul class="fh5co-sub-menu">                                        
+                                        <li><a href="../Admin/LBElectionYears.aspx">Add Election Year</a></li>
+                                        <li><a href="../Elections/LBElectionResults.aspx">Add Results</a></li>                                                                                                                                                                                                       
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="services.html" class="fh5co-sub-ddown">Reports</a>
+                                    <ul class="fh5co-sub-menu">                                        
+                                        <li><a href="../Reports/ElectionWinerGraph.aspx">Election Winner</a></li>                                        
+                                            <li><a href="../Reports/PartiesVotes.aspx">Parties Votes</a></li>                                        
+                                        <li><a href="../Reports/VFU_LM.aspx">Vote For Us</a></li>
+                                        <li><a href="../Reports/IndependantCand.aspx">Independant MNA/MPA</a></li>
+                                        <li><a href="../Reports/InfluentialFigure.aspx">Influential Figures</a></li>
+                                        <li><a href="../Reports/ViewAboutEstablishment.aspx">Views About Establishment</a></li>
+                                        <li><a href="../Reports/OnGoingResults.aspx">On Going Results</a></li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="main-content" style="min-height:400px;">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer>
+            <div id="footer">
+                
+               &copy 2015. All rights reserved | Design by WAIQ
+                        
+            </div>
+        </footer>
+    </form>
+
+
+</body>
+</html>
